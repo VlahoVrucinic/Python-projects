@@ -1,17 +1,22 @@
-import random
+import secrets
 import string
 
 def password_generator():
-	# postavi listu koja sadrzi abecedu, brojeve od 1 do 9 i znakove
-	characters = list(string.ascii_letters + string.digits + "!@#$%^&*()")
-	# u prazni string ce se unositi znakovi iz characters liste
-	password = ''
-	# pitam usera koliko dugacak password zeli
-	length_of_pass = int(input('How long do you want the password to be?'))
-	# prolazi kroz duzinu passworda(broj koji dam), i nasumicno dodaje znakove iz characters liste
-	for x in range(length_of_pass):
-		password_char = random.choice(characters)
-		password = password + password_char
+    while True:
+        characters = string.ascii_letters +  string.ascii_lowercase + string.ascii_uppercase + string.digits + string.punctuation
 
-		
-	print(password)
+        password_range = int(input('Enter the range of the password: '))
+        if password_range < 8:
+            print('Password too short, try again')
+            continue
+        password = ''
+
+        for num in range(password_range):
+            password = ''.join(secrets.choice(characters))
+            print(password, end='')
+        
+        again = input('Do you want to go again? type yes to go again: ')
+        if again == 'yes':
+            continue
+        else:
+            break
