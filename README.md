@@ -1,4 +1,6 @@
 # Python-projects
-Here i will put some of my python projects
+Hello,
 
-To view the code simply open the files, to view the result download all the projects and open the one you want in your IDE.
+These are examples of my work in the Python programming language.
+Here are 6 programs I have created so far, and they serve as an indicator of my initial work in Python.
+I will continue improving my skills and developing in Python programming.
